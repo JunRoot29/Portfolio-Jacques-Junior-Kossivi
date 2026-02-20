@@ -689,6 +689,10 @@ h1, h2, h3, h4 {
     color: white;
 }
 
+.about-actions {
+    margin-top: 1.25rem;
+}
+
 /* Skills */
 .skills-grid {
     display: grid;
@@ -823,6 +827,8 @@ h1, h2, h3, h4 {
     background: linear-gradient(120deg, rgba(16, 165, 165, 0.12), transparent 55%);
     opacity: 0;
     transition: var(--transition);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .project-card:hover::before {
@@ -842,6 +848,11 @@ h1, h2, h3, h4 {
     transition: opacity 0.2s ease;
     pointer-events: none;
     z-index: 1;
+}
+
+.project-card > * {
+    position: relative;
+    z-index: 2;
 }
 
 .project-card:hover::after {
