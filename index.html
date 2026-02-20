@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Kossivi Jacques Junior AGBENONZAN, étudiant en cybersécurité et réseaux: projets Python, cloud, sécurité et infrastructures réseau.">
+    <meta name="theme-color" content="#10a5a5">
     <title>Kossivi Jacques Junior AGBENONZAN | Étudiant en Cybersécurité et Réseaux</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,16 +15,16 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#accueil" class="logo">AKJ&sup2;<span class="logo-dot">.</span></a>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">A propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#accueil" class="logo">JJKA<span class="logo-dot">.</span></a>
+            <ul class="nav-links" id="primary-nav">
+                <li><a class="nav-link" href="#accueil">Accueil</a></li>
+                <li><a class="nav-link" href="#apropos">A propos</a></li>
+                <li><a class="nav-link" href="#competences">Compétences</a></li>
+                <li><a class="nav-link" href="#projets">Projets</a></li>
+                <li><a class="nav-link" href="#parcours">Parcours</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -65,7 +67,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="profile-frame">
-                        <img src="Doc/1770812254707.png" alt="Portrait de Kossivi Jacques Junior AGBENONZAN" class="profile-photo">
+                        <img src="document/1770812254707.png" alt="Portrait de Kossivi Jacques Junior AGBENONZAN" class="profile-photo">
                     </div>
                     <div class="profile-badge">
                         <i class="fas fa-shield-heart"></i>
@@ -133,28 +135,52 @@
                     </p>
                     <div class="about-info">
                         <div class="info-item">
-                            <span class="info-label">Nom :</span>
-                            <span class="info-value">Kossivi Jacques Junior AGBENONZAN</span>
+                            <div class="info-icon"><i class="fas fa-id-badge"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Profil</span>
+                                <span class="info-value">Kossivi Jacques Junior AGBENONZAN</span>
+                                <span class="info-note">Étudiant orienté sécurité offensive et défensive</span>
+                            </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Age :</span>
-                            <span class="info-value">22 ans</span>
+                            <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Base</span>
+                                <span class="info-value">Port-Bouet, Abidjan, Côte d'Ivoire</span>
+                                <span class="info-note">Disponible pour missions sur site ou à distance</span>
+                            </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Nationalité :</span>
-                            <span class="info-value">Togolaise</span>
+                            <div class="info-icon"><i class="fas fa-user-clock"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Âge</span>
+                                <span class="info-value">22 ans</span>
+                                <span class="info-note">Progression continue en cybersécurité et cloud</span>
+                            </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Ville :</span>
-                            <span class="info-value">Port-Bouet, Abidjan, Cote d'Ivoire</span>
+                            <div class="info-icon"><i class="fas fa-flag"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Nationalité</span>
+                                <span class="info-value">Togolaise</span>
+                                <span class="info-note">Culture technique francophone et ouverte à l'international</span>
+                            </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Email :</span>
-                            <span class="info-value">junioragbenonzan31@gmail.com</span>
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Contact Email</span>
+                                <span class="info-value">junioragbenonzan31@gmail.com</span>
+                                <span class="info-note">Réponse rapide pour stage, freelance ou collaboration</span>
+                            </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Téléphone :</span>
-                            <span class="info-value">+225 05 75 88 98 26</span>
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Téléphone</span>
+                                <span class="info-value">+225 05 75 88 98 26</span>
+                                <span class="info-note">Canal direct pour prise de contact professionnelle</span>
+                            </div>
                         </div>
                     </div>
                     <div class="qualities">
@@ -289,7 +315,7 @@
                             <li>Interpolation de Lagrange</li>
                         </ul>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live (à venir)</a>
+                            <span class="project-link is-disabled" aria-disabled="true"><i class="fas fa-clock"></i> Démo privée en préparation</span>
                         </div>
                     </div>
                 </div>
@@ -317,8 +343,8 @@
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/JunRoot29/TP3---CyberSecurit---AGBENONZAN-JUNIOR-SANOGO-SOULEYMANE.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
-                            <a href="Doc/Documentation%20-%20Pro%20Fil%20rouge.docx" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-word"></i> Documentation</a>
-                            <a href="Doc/Rapport%20Final%20%E2%80%94%20Projet%20Fil%20rouge.docx" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-word"></i> Rapport final</a>
+                            <a href="document/Documentation%20-%20Pro%20Fil%20rouge.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Documentation</a>
+                            <a href="document/Rapport%20Final%20%E2%80%94%20Projet%20Fil%20rouge.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport final</a>
                         </div>
                     </div>
                 </div>
@@ -345,7 +371,7 @@
                             <li>SEO optimisé</li>
                         </ul>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-eye"></i> Lien à venir</a>
+                            <span class="project-link is-disabled" aria-disabled="true"><i class="fas fa-clock"></i> Mise en ligne en cours</span>
                         </div>
                     </div>
                 </div>
@@ -403,7 +429,7 @@
                     </div>
                     <div class="project-details">
                         <div class="project-links">
-                            <a href="Doc/Analyse%20WireShark.docx" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-word"></i> Rapport</a>
+                            <a href="document/Analyse%20WireShark.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
                         </div>
                     </div>
                 </div>
@@ -429,7 +455,7 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="Doc/centreon.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport PDF</a>
+                            <a href="document/centreon.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport PDF</a>
                         </div>
                     </div>
                 </div>
@@ -457,7 +483,7 @@
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/JunRoot29/Gestion-d-une-Bibliotheque.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
-                            <a href="https://gestion-d-une-bibliotheque--juniorkossivi.replit.app/login" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-up-right-from-square"></i> Voir le projet</a>
+                            <a href="document/RAPPORT%20DU%20PROJETGESTION%20DE%20BIBLIOTHEQUE.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport PDF</a>
                         </div>
                     </div>
                 </div>
@@ -512,7 +538,7 @@
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/JunRoot29/Projet-DHCP-Analyse-du-processus-DORA-IPv4-vs-IPv6-.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
-                            <a href="Doc/TP%20%E2%80%93%20DHCP.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
+                            <a href="document/TP%20%E2%80%93%20DHCP.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
                         </div>
                     </div>
                 </div>
@@ -610,6 +636,7 @@
                         <input type="text" name="name" placeholder="Votre nom" required>
                         <input type="email" name="email" placeholder="Votre email" required>
                         <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+                        <p class="contact-help">Ce formulaire ouvre votre application email avec un message prérempli.</p>
                         <button type="submit" class="btn btn-primary">Envoyer le Message</button>
                     </form>
                 </div>
@@ -630,6 +657,11 @@
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>
 </body>
