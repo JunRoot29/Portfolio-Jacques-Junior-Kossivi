@@ -1,78 +1,101 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Kossivi Jacques Junior AGBENONZAN, étudiant en cybersécurité et réseaux: projets Python, cloud, sécurité et infrastructures réseau.">
     <meta name="theme-color" content="#10a5a5">
-    <title>Kossivi Jacques Junior AGBENONZAN | Étudiant en Cybersécurité et Réseaux</title>
+    <title>JJKA · Cybersécurité & Réseaux | Abidjan</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="scroll-progress" aria-hidden="true"></div>
-    <!-- Navigation -->
-    <nav class="navbar">
+
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="container">
-            <a href="#accueil" class="logo">JJKA<span class="logo-dot">.</span></a>
-            <ul class="nav-links" id="primary-nav">
+            <a href="#accueil" class="logo" aria-label="Accueil JJKA">JJKA<span class="logo-dot">.</span></a>
+            <ul class="nav-links" id="primary-nav" role="list">
                 <li><a class="nav-link" href="#accueil">Accueil</a></li>
-                <li><a class="nav-link" href="#apropos">A propos</a></li>
+                <li><a class="nav-link" href="#apropos">À propos</a></li>
                 <li><a class="nav-link" href="#competences">Compétences</a></li>
                 <li><a class="nav-link" href="#projets">Projets</a></li>
                 <li><a class="nav-link" href="#parcours">Parcours</a></li>
                 <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Activer le mode clair" title="Changer de thème">
+                    <span class="theme-icon theme-icon-moon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    </span>
+                    <span class="theme-icon theme-icon-sun" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </span>
+                    <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span></span>
+                </button>
+                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Section Accueil -->
+    <!-- ═══ HERO ═══ -->
     <section id="accueil" class="hero">
         <div class="hero-ornaments" aria-hidden="true">
             <span class="orb orb-1"></span>
             <span class="orb orb-2"></span>
             <span class="orb orb-3"></span>
             <span class="grid-sheen"></span>
+            <div class="hero-scan-line"></div>
         </div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h4 class="hero-subtitle">Bonjour, je suis</h4>
-                    <h1 class="hero-title">Kossivi Jacques Junior <span class="highlight">AGBENONZAN</span></h1>
-                    <h2 class="hero-role">Étudiant en Cybersécurité et Réseaux</h2>
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-dot"></span> Bonjour, je suis
+                    </div>
+                    <h1 class="hero-title">
+                        Kossivi Jacques<br>Junior
+                        <span class="highlight hero-name-accent">AGBENONZAN</span>
+                    </h1>
+                    <h2 class="hero-role">
+                        <span class="role-bracket">[</span>
+                        Étudiant en Cybersécurité &amp; Réseaux
+                        <span class="role-bracket">]</span>
+                    </h2>
                     <p class="hero-desc">
                         Passionné par Python, la cybersécurité et l'analyse des réseaux.
                         Je développe des compétences solides en conception, sécurisation et
                         optimisation des infrastructures informatiques.
                     </p>
                     <div class="hero-tags">
-                        <span>Cyber défense</span>
-                        <span>Python & Automatisation</span>
-                        <span>Réseaux & Cloud</span>
+                        <span><i class="fas fa-shield-halved"></i> Cyber défense</span>
+                        <span><i class="fab fa-python"></i> Python &amp; Automatisation</span>
+                        <span><i class="fas fa-network-wired"></i> Réseaux &amp; Cloud</span>
                     </div>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Me Contacter</a>
-                        <a href="#projets" class="btn btn-secondary">Voir Mes Projets</a>
-                        <a href="document/MON%20CV.pdf" class="btn btn-secondary" download><i class="fas fa-download"></i>&nbsp;Télécharger mon CV</a>
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Me Contacter</a>
+                        <a href="#projets" class="btn btn-secondary">Voir Mes Projets <i class="fas fa-arrow-right"></i></a>
+                        <a href="document/MON%20CV.pdf" class="btn btn-ghost" download><i class="fas fa-download"></i> CV (PDF)</a>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/kossivi-jacques-junior-agbenonzan-235bb1358" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://web.facebook.com/junior.kossivi.2025" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/juniork_2902/" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:junioragbenonzan31@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/kossivi-jacques-junior-agbenonzan-235bb1358" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://web.facebook.com/junior.kossivi.2025" target="_blank" rel="noreferrer" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/juniork_2902/" target="_blank" rel="noreferrer" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="/cdn-cgi/l/email-protection#d1bba4bfb8bea3b0b6b3b4bfbebfabb0bfe2e091b6bcb0b8bdffb2bebc" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/JunRoot29" target="_blank" rel="noreferrer" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
+
                 <div class="hero-image">
                     <div class="profile-frame">
-                        <img src="document/1770812254707.png" alt="Portrait de Kossivi Jacques Junior AGBENONZAN" class="profile-photo">
+                        <img src="document/1770812254707.png" alt="Portrait de Kossivi Jacques Junior AGBENONZAN" class="profile-photo" loading="eager">
                     </div>
                     <div class="profile-badge">
                         <i class="fas fa-shield-heart"></i>
-                        <span>Cyber & Réseaux</span>
+                        <span>Cyber &amp; Réseaux</span>
                     </div>
                     <div class="orbit" aria-hidden="true">
                         <span class="orbit-ring ring-outer"></span>
@@ -84,7 +107,7 @@
                         <span class="orbit-dot dot-2"></span>
                         <span class="orbit-dot dot-3"></span>
                     </div>
-                    <div class="floating-elements">
+                    <div class="floating-elements" aria-hidden="true">
                         <div class="floating-element element1"><i class="fab fa-python"></i></div>
                         <div class="floating-element element2"><i class="fas fa-shield-alt"></i></div>
                         <div class="floating-element element3"><i class="fas fa-network-wired"></i></div>
@@ -92,40 +115,48 @@
                 </div>
             </div>
         </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+            <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+            <span class="scroll-label">Défiler</span>
+        </div>
     </section>
 
-    <!-- Section Statistiques -->
-    <section class="section stats">
+    <!-- ═══ STATS ═══ -->
+    <section class="section stats" aria-label="Chiffres clés">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3 class="stat-number" data-count="10">10</h3>
+                    <div class="stat-icon-wrap"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="stat-number" data-count="10">0</h3>
                     <p>Projets réalisés</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-code"></i>
-                    <h3 class="stat-number" data-count="10">10</h3>
+                    <div class="stat-icon-wrap"><i class="fas fa-code"></i></div>
+                    <h3 class="stat-number" data-count="10">0</h3>
                     <p>Technologies maîtrisées</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3 class="stat-number" data-count="3">3</h3>
+                    <div class="stat-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="stat-number" data-count="3">0</h3>
                     <p>Années d'études</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-language"></i>
-                    <h3 class="stat-number" data-count="2">2</h3>
+                    <div class="stat-icon-wrap"><i class="fas fa-language"></i></div>
+                    <h3 class="stat-number" data-count="2">0</h3>
                     <p>Langues parlées</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section A propos -->
+    <!-- ═══ À PROPOS ═══ -->
     <section id="apropos" class="section about">
         <div class="container">
-            <h2 class="section-title">A <span class="highlight">propos</span></h2>
+            <div class="section-head">
+                <span class="section-eyebrow">Qui suis-je ?</span>
+                <h2 class="section-title">À <span class="highlight">propos</span></h2>
+            </div>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Étudiant en Licence 3 RIST</h3>
@@ -163,15 +194,15 @@
                             <div class="info-icon"><i class="fas fa-flag"></i></div>
                             <div class="info-copy">
                                 <span class="info-label">Nationalité</span>
-                                <span class="info-value">Togolaise</span>
-                                <span class="info-note">Culture technique francophone et ouverte à l'international</span>
+                                <span class="info-value">Togolaise 🇹🇬</span>
+                                <span class="info-note">Culture technique francophone, ouverte à l'international</span>
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-icon"><i class="fas fa-envelope"></i></div>
                             <div class="info-copy">
-                                <span class="info-label">Contact Email</span>
-                                <span class="info-value">junioragbenonzan31@gmail.com</span>
+                                <span class="info-label">Email</span>
+                                <span class="info-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="68021d0601071a090f0a0d0607061209065b59280f05090104460b0705">[email&#160;protected]</a></span>
                                 <span class="info-note">Réponse rapide pour stage, freelance ou collaboration</span>
                             </div>
                         </div>
@@ -185,7 +216,7 @@
                         </div>
                     </div>
                     <div class="qualities">
-                        <h4>Qualités personnelles :</h4>
+                        <h4>Qualités personnelles</h4>
                         <div class="tags">
                             <span class="tag">Autodidacte</span>
                             <span class="tag">Adaptation rapide</span>
@@ -196,84 +227,96 @@
                         </div>
                     </div>
                     <div class="about-actions">
-                        <a href="document/MON%20CV.pdf" class="btn btn-primary" download><i class="fas fa-file-arrow-down"></i>&nbsp;Télécharger le CV (PDF)</a>
+                        <a href="document/MON%20CV.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-file-arrow-down"></i> Télécharger le CV (PDF)
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Compétences Techniques -->
+    <!-- ═══ COMPÉTENCES ═══ -->
     <section id="competences" class="section skills">
         <div class="container">
-            <h2 class="section-title">Compétences <span class="highlight">techniques</span></h2>
+            <div class="section-head">
+                <span class="section-eyebrow">Stack technique</span>
+                <h2 class="section-title">Compétences <span class="highlight">techniques</span></h2>
+            </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Développement</h3>
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+                        <h3>Développement</h3>
+                    </div>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">85%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Python 85%">
                                 <div class="skill-level" data-level="85"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">C</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">C</span><span class="skill-pct">70%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="C 70%">
                                 <div class="skill-level" data-level="70"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">HTML & CSS</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">75%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="HTML CSS 75%">
                                 <div class="skill-level" data-level="75"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="skill-category">
-                    <h3><i class="fas fa-network-wired"></i> Réseaux et sécurité</h3>
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>Réseaux &amp; Sécurité</h3>
+                    </div>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <span class="skill-name">Cisco Packet Tracer</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">Cisco Packet Tracer</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                                 <div class="skill-level" data-level="80"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Wireshark</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">Wireshark</span><span class="skill-pct">75%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                 <div class="skill-level" data-level="75"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Protocoles réseaux</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">Protocoles réseaux</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                                 <div class="skill-level" data-level="80"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud et outils</h3>
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Cloud &amp; Outils</h3>
+                    </div>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <span class="skill-name">AWS</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">AWS</span><span class="skill-pct">70%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                                 <div class="skill-level" data-level="70"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Sécurité réseau</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">Sécurité réseau</span><span class="skill-pct">75%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                 <div class="skill-level" data-level="75"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Analyse de menaces</span>
-                            <div class="skill-bar">
+                            <div class="skill-top"><span class="skill-name">Analyse de menaces</span><span class="skill-pct">70%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                                 <div class="skill-level" data-level="70"></div>
                             </div>
                         </div>
@@ -283,35 +326,32 @@
         </div>
     </section>
 
-    <!-- Section Projets -->
+    <!-- ═══ PROJETS ═══ -->
     <section id="projets" class="section projects">
         <div class="container">
-            <h2 class="section-title">Mes <span class="highlight">Projets</span></h2>
+            <div class="section-head">
+                <span class="section-eyebrow">Ce que j'ai construit</span>
+                <h2 class="section-title">Mes <span class="highlight">Projets</span></h2>
+            </div>
 
-            <!-- Filtre des projets -->
-            <div class="project-filter">
-                <button class="filter-btn active" data-filter="all">Tous</button>
-                <button class="filter-btn" data-filter="web">Web Dev</button>
-                <button class="filter-btn" data-filter="security">Cybersécurité</button>
-                <button class="filter-btn" data-filter="cloud">Cloud/Réseaux</button>
+            <div class="project-filter" role="group" aria-label="Filtrer les projets">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-th-large"></i> Tous</button>
+                <button class="filter-btn" data-filter="web"><i class="fas fa-laptop-code"></i> Web Dev</button>
+                <button class="filter-btn" data-filter="security"><i class="fas fa-shield-halved"></i> Cybersécurité</button>
+                <button class="filter-btn" data-filter="cloud"><i class="fas fa-cloud"></i> Cloud/Réseaux</button>
             </div>
 
             <div class="projects-grid">
-                <!-- Projet 1 - MathCraft Web -->
-                <div class="project-card" data-category="web">
-                    <div class="project-icon">
-                        <i class="fas fa-calculator"></i>
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
                     </div>
                     <h3>MathCraft Web</h3>
-                    <p>Plateforme web interactive de mathématiques numériques avec API Flask. Version web de MathCraft pour l'apprentissage accessible.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>API REST</span>
-                        <span>JavaScript</span>
-                    </div>
+                    <p>Plateforme web interactive de mathématiques numériques avec API Flask pour l'apprentissage accessible.</p>
+                    <div class="project-tech"><span>Python</span><span>Flask</span><span>API REST</span><span>JavaScript</span></div>
                     <div class="project-details">
-                        <h4>Fonctionnalités :</h4>
+                        <h4>Fonctionnalités</h4>
                         <ul>
                             <li>Calculs numériques via API REST</li>
                             <li>Théorie des nombres</li>
@@ -322,23 +362,19 @@
                             <span class="project-link is-disabled" aria-disabled="true"><i class="fas fa-clock"></i> Démo privée en préparation</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 2 - Cybersécurité -->
-                <div class="project-card" data-category="security">
-                    <div class="project-icon">
-                        <i class="fas fa-shield-alt"></i>
+                <article class="project-card featured" data-category="security">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="project-cat-badge security-badge">Sécurité</div>
                     </div>
+                    <div class="featured-label">⭐ Projet phare</div>
                     <h3>Projet Fil Rouge</h3>
-                    <p>Infrastructure virtualisée sécurisée avec segmentation réseau, cloud dockerisé et audit de sécurité selon le framework NIST.</p>
-                    <div class="project-tech">
-                        <span>Docker</span>
-                        <span>Cybersécurité</span>
-                        <span>Virtualisation</span>
-                        <span>NIST</span>
-                    </div>
+                    <p>Infrastructure virtualisée sécurisée avec segmentation réseau, cloud dockerisé et audit NIST.</p>
+                    <div class="project-tech"><span>Docker</span><span>Cybersécurité</span><span>Virtualisation</span><span>NIST</span></div>
                     <div class="project-details">
-                        <h4>Architecture :</h4>
+                        <h4>Architecture</h4>
                         <ul>
                             <li>Segmentation réseau (LAN/DMZ)</li>
                             <li>Cloud simulé avec Docker</li>
@@ -347,27 +383,22 @@
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/JunRoot29/TP3---CyberSecurit---AGBENONZAN-JUNIOR-SANOGO-SOULEYMANE.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
-                            <a href="document/Documentation%20-%20Pro%20Fil%20rouge.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Documentation</a>
-                            <a href="document/Rapport%20Final%20%E2%80%94%20Projet%20Fil%20rouge.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport final</a>
+                            <a href="document/Documentation%20-%20Pro%20Fil%20rouge.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Docs</a>
+                            <a href="document/Rapport%20Final%20%E2%80%94%20Projet%20Fil%20rouge.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 3 - HKI Innovation -->
-                <div class="project-card" data-category="web">
-                    <div class="project-icon">
-                        <i class="fas fa-building"></i>
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-building"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
                     </div>
                     <h3>HKI Innovation</h3>
                     <p>Site web professionnel pour une entreprise spécialisée en reprographie, informatique et formations à Abidjan.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Responsive</span>
-                    </div>
+                    <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div>
                     <div class="project-details">
-                        <h4>Fonctionnalités :</h4>
+                        <h4>Fonctionnalités</h4>
                         <ul>
                             <li>Design responsive moderne</li>
                             <li>Intégration WhatsApp</li>
@@ -378,166 +409,129 @@
                             <span class="project-link is-disabled" aria-disabled="true"><i class="fas fa-clock"></i> Mise en ligne en cours</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 4 - AWS Serverless -->
-                <div class="project-card" data-category="cloud">
-                    <div class="project-icon">
-                        <i class="fas fa-cloud"></i>
+                <article class="project-card" data-category="cloud">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-cloud"></i></div>
+                        <div class="project-cat-badge cloud-badge">Cloud</div>
                     </div>
-                    <h3>Application Web Serverless AWS</h3>
-                    <p>Mise en place d'une application web utilisant les services serverless d'AWS (Lambda, API Gateway, S3).</p>
-                    <div class="project-tech">
-                        <span>AWS</span>
-                        <span>Cloud</span>
-                        <span>Serverless</span>
-                    </div>
+                    <h3>Application Serverless AWS</h3>
+                    <p>Application web utilisant les services serverless d'AWS : Lambda, API Gateway, S3.</p>
+                    <div class="project-tech"><span>AWS</span><span>Lambda</span><span>API Gateway</span><span>S3</span></div>
                     <div class="project-details">
                         <div class="project-links">
                             <a href="https://ufhb-frontend-jjk.s3.eu-north-1.amazonaws.com/index.html" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-external-link-alt"></i> Live</a>
                             <a href="https://github.com/JunRoot29/Site-Ufhb.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 5 - Calculatrice Python -->
-                <div class="project-card" data-category="web">
-                    <div class="project-icon">
-                        <i class="fas fa-calculator"></i>
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
                     </div>
                     <h3>MathCraft Tkinter</h3>
-                    <p>Création d'une application de calculatrice moderne avec interface graphique utilisant Python et Tkinter.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Tkinter</span>
-                        <span>GUI</span>
-                    </div>
+                    <p>Application de calculatrice moderne avec interface graphique utilisant Python et Tkinter.</p>
+                    <div class="project-tech"><span>Python</span><span>Tkinter</span><span>GUI</span></div>
                     <div class="project-details">
                         <div class="project-links">
                             <a href="https://github.com/JunRoot29/MathCraft.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 6 - Analyse Wireshark -->
-                <div class="project-card" data-category="security">
-                    <div class="project-icon">
-                        <i class="fas fa-shield-alt"></i>
+                <article class="project-card" data-category="security">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-binoculars"></i></div>
+                        <div class="project-cat-badge security-badge">Sécurité</div>
                     </div>
-                    <h3>Analyse réseau avec Wireshark</h3>
-                    <p>Projet d'analyse de trafic réseau et détection de menaces à l'aide de Wireshark.</p>
-                    <div class="project-tech">
-                        <span>Wireshark</span>
-                        <span>Réseaux</span>
-                        <span>Sécurité</span>
-                    </div>
+                    <h3>Analyse réseau Wireshark</h3>
+                    <p>Analyse de trafic réseau et détection de menaces à l'aide de Wireshark.</p>
+                    <div class="project-tech"><span>Wireshark</span><span>Réseaux</span><span>Sécurité</span></div>
                     <div class="project-details">
                         <div class="project-links">
                             <a href="document/Analyse%20WireShark.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 7 - Supervision Réseau Centreon -->
-                <div class="project-card" data-category="security">
-                    <div class="project-icon">
-                        <i class="fas fa-desktop"></i>
+                <article class="project-card" data-category="security">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-desktop"></i></div>
+                        <div class="project-cat-badge security-badge">Sécurité</div>
                     </div>
-                    <h3>Supervision réseau avec Centreon</h3>
-                    <p>Mise en place d'une solution complète de supervision réseau avec Centreon dans un environnement virtualisé VMware.</p>
-                    <div class="project-tech">
-                        <span>Centreon</span>
-                        <span>SNMP</span>
-                        <span>VMware</span>
-                        <span>Postfix</span>
-                    </div>
+                    <h3>Supervision réseau Centreon</h3>
+                    <p>Solution complète de supervision réseau avec Centreon dans un environnement VMware.</p>
+                    <div class="project-tech"><span>Centreon</span><span>SNMP</span><span>VMware</span><span>Postfix</span></div>
                     <div class="project-details">
                         <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-number">3</span>
-                                <span class="stat-label">Serveurs</span>
-                            </div>
+                            <div class="stat"><span class="stat-number">3</span><span class="stat-label">Serveurs</span></div>
                         </div>
                         <div class="project-links">
-                            <a href="document/centreon.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport PDF</a>
+                            <a href="document/centreon.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 8 - Gestion de Bibliothèque -->
-                <div class="project-card" data-category="web">
-                    <div class="project-icon">
-                        <i class="fas fa-book"></i>
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
                     </div>
-                    <h3>Système de Gestion de Bibliothèque</h3>
-                    <p>Application web académique avec Flask, SQLite et interface HTML/CSS pour gérer comptes, catalogue, emprunts et réservations.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>SQLite</span>
-                        <span>HTML/CSS</span>
-                    </div>
+                    <h3>Gestion de Bibliothèque</h3>
+                    <p>Application web avec Flask, SQLite pour gérer comptes, catalogue, emprunts et réservations.</p>
+                    <div class="project-tech"><span>Python</span><span>Flask</span><span>SQLite</span><span>HTML/CSS</span></div>
                     <div class="project-details">
-                        <h4>Points forts :</h4>
+                        <h4>Points forts</h4>
                         <ul>
                             <li>Gestion des rôles admin/usager</li>
-                            <li>Workflow complet d'emprunt et de retour</li>
-                            <li>Dashboards avec indicateurs et alertes</li>
-                            <li>Recherche multicritères sur le catalogue</li>
+                            <li>Workflow complet d'emprunt</li>
+                            <li>Dashboards avec alertes</li>
+                            <li>Recherche multicritères</li>
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/JunRoot29/Gestion-d-une-Bibliotheque.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
-                            <a href="document/RAPPORT%20DU%20PROJETGESTION%20DE%20BIBLIOTHEQUE.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport PDF</a>
+                            <a href="document/RAPPORT%20DU%20PROJETGESTION%20DE%20BIBLIOTHEQUE.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 9 - Inscription en ligne UFHB -->
-                <div class="project-card" data-category="web">
-                    <div class="project-icon">
-                        <i class="fas fa-user-graduate"></i>
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
                     </div>
-                    <h3>Simulation d'inscription en ligne UFHB</h3>
-                    <p>Application de gestion des inscriptions universitaires avec interface web Flask et application mobile Kivy, base SQLite.</p>
-                    <div class="project-tech">
-                        <span>Flask</span>
-                        <span>Kivy</span>
-                        <span>SQLite</span>
-                        <span>Python</span>
-                    </div>
+                    <h3>Simulation Inscription UFHB</h3>
+                    <p>Application de gestion des inscriptions universitaires avec Flask, Kivy et SQLite.</p>
+                    <div class="project-tech"><span>Flask</span><span>Kivy</span><span>SQLite</span><span>Python</span></div>
                     <div class="project-details">
-                        <h4>Workflow métier :</h4>
+                        <h4>Workflow métier</h4>
                         <ul>
-                            <li>Création et suivi du dossier étudiant</li>
-                            <li>Validation pédagogique avec statuts</li>
-                            <li>Paiement puis decision administrative finale</li>
-                            <li>Tableau de bord, filtres et données de démo</li>
+                            <li>Création et suivi du dossier</li>
+                            <li>Validation pédagogique</li>
+                            <li>Tableau de bord et filtres</li>
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/JunRoot29/TP---FIN-DE-MODULE---GENIE-LOGICIEL.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Projet 10 - DHCP DORA IPv4 vs IPv6 -->
-                <div class="project-card" data-category="security">
-                    <div class="project-icon">
-                        <i class="fas fa-network-wired"></i>
+                <article class="project-card" data-category="security">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="project-cat-badge security-badge">Sécurité</div>
                     </div>
                     <h3>Analyse DHCP DORA IPv4 vs IPv6</h3>
-                    <p>Analyse comparative du processus DORA entre la norme DHCP et son comportement réel via captures Wireshark.</p>
-                    <div class="project-tech">
-                        <span>DHCP</span>
-                        <span>Wireshark</span>
-                        <span>IPv4/IPv6</span>
-                        <span>Kathara</span>
-                    </div>
+                    <p>Analyse comparative du processus DORA DHCP entre IPv4 et IPv6 via captures Wireshark.</p>
+                    <div class="project-tech"><span>DHCP</span><span>Wireshark</span><span>IPv4/IPv6</span><span>Kathara</span></div>
                     <div class="project-details">
-                        <h4>Livrables :</h4>
+                        <h4>Livrables</h4>
                         <ul>
                             <li>Captures PCAP DHCPv4 et DHCPv6</li>
-                            <li>Comparatif broadcast, multicast et unicast</li>
-                            <li>Screenshots annotées sous Wireshark</li>
+                            <li>Comparatif broadcast et multicast</li>
                             <li>Analyse concise du processus DORA</li>
                         </ul>
                         <div class="project-links">
@@ -545,128 +539,157 @@
                             <a href="document/TP%20%E2%80%93%20DHCP.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
 
-            <!-- Catégories de projets -->
             <div class="project-categories">
                 <div class="category">
-                    <h3><i class="fas fa-laptop-code"></i> Développement web</h3>
+                    <div class="cat-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Développement web</h3>
                     <p>Projets frontend et backend avec technologies modernes</p>
                 </div>
                 <div class="category">
-                    <h3><i class="fas fa-shield-halved"></i> Cybersécurité</h3>
+                    <div class="cat-icon-wrap"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Cybersécurité</h3>
                     <p>Infrastructures sécurisées et analyses de sécurité</p>
                 </div>
                 <div class="category">
-                    <h3><i class="fas fa-network-wired"></i> Réseaux et cloud</h3>
+                    <div class="cat-icon-wrap"><i class="fas fa-network-wired"></i></div>
+                    <h3>Réseaux &amp; Cloud</h3>
                     <p>Architectures réseaux et déploiements cloud</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Parcours Académique -->
+    <!-- ═══ PARCOURS ═══ -->
     <section id="parcours" class="section timeline">
         <div class="container">
-            <h2 class="section-title">Parcours <span class="highlight">académique</span></h2>
+            <div class="section-head">
+                <span class="section-eyebrow">Mon chemin</span>
+                <h2 class="section-title">Parcours <span class="highlight">académique</span></h2>
+            </div>
             <div class="timeline-container">
                 <div class="timeline-item">
-                    <div class="timeline-date">2025 - 2026</div>
+                    <div class="timeline-date">
+                        <span class="tl-year">2025 – 2026</span>
+                        <span class="tl-status">En cours</span>
+                    </div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content">
                         <h3>Licence 3 en Sciences Informatiques</h3>
                         <p>Spécialité Réseaux, Informatique, Sécurité et Télécommunication (RIST)</p>
-                        <p class="institution">Université Félix Houphouët-Boigny, Abidjan</p>
+                        <p class="institution"><i class="fas fa-university"></i> Université Félix Houphouët-Boigny, Abidjan</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-date"><span class="tl-year">2024 – 2025</span></div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content">
                         <h3>Licence 2 (DEUG II) en Sciences Informatiques</h3>
                         <p>UFR de Mathématique et Informatique</p>
-                        <p class="institution">Université Félix Houphouët-Boigny, Abidjan</p>
+                        <p class="institution"><i class="fas fa-university"></i> Université Félix Houphouët-Boigny, Abidjan</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2022 - 2023</div>
+                    <div class="timeline-date"><span class="tl-year">2022 – 2023</span></div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content">
-                        <h3>Licence 1 (DEUG I) Mathématique et application</h3>
+                        <h3>Licence 1 (DEUG I) Mathématique et Application</h3>
                         <p>UFR de Mathématique et Informatique</p>
-                        <p class="institution">Université Félix Houphouët-Boigny, Abidjan</p>
+                        <p class="institution"><i class="fas fa-university"></i> Université Félix Houphouët-Boigny, Abidjan</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2021 - 2022</div>
+                    <div class="timeline-date"><span class="tl-year">2021 – 2022</span></div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content">
-                        <h3>Baccalauréat</h3>
-                        <p> Série D (Scientifique)</p>
-                        <p class="institution">Lycée Moderne de Port Bouet, Abidjan</p>
+                        <h3>Baccalauréat Série D — Scientifique</h3>
+                        <p class="institution"><i class="fas fa-school"></i> Lycée Moderne de Port Bouet, Abidjan</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Contact -->
+    <!-- ═══ CONTACT ═══ -->
     <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="section-title">Me <span class="highlight">Contacter</span></h2>
+            <div class="section-head">
+                <span class="section-eyebrow">Travaillons ensemble</span>
+                <h2 class="section-title">Me <span class="highlight">Contacter</span></h2>
+            </div>
             <div class="contact-content">
                 <div class="contact-info">
+                    <p class="contact-intro">Disponible pour des opportunités de stage, collaborations ou projets freelance. N'hésitez pas à me contacter !</p>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h3>Localisation</h3>
-                            <p>Port-Bouet, Abidjan, Cote d'Ivoire</p>
+                            <p>Port-Bouet, Abidjan, Côte d'Ivoire</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <div class="contact-icon-wrap"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h3>Email</h3>
-                            <p>junioragbenonzan31@gmail.com</p>
+                            <p><a href="/cdn-cgi/l/email-protection#563c23383f3924373134333839382c3738656716313b373f3a7835393b"><span class="__cf_email__" data-cfemail="8ae0ffe4e3e5f8ebede8efe4e5e4f0ebe4b9bbcaede7ebe3e6a4e9e5e7">[email&#160;protected]</span></a></p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                        <div class="contact-icon-wrap"><i class="fas fa-phone"></i></div>
                         <div>
                             <h3>Téléphone</h3>
-                            <p>+225 05 75 88 98 26</p>
+                            <p><a href="tel:+2250575889826">+225 05 75 88 98 26</a></p>
                         </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/kossivi-jacques-junior-agbenonzan-235bb1358" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/JunRoot29" target="_blank" rel="noreferrer" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://web.facebook.com/junior.kossivi.2025" target="_blank" rel="noreferrer" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" name="name" placeholder="Votre nom" required>
-                        <input type="email" name="email" placeholder="Votre email" required>
-                        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-                        <p class="contact-help">Ce formulaire ouvre votre application email avec un message prérempli.</p>
-                        <button type="submit" class="btn btn-primary">Envoyer le Message</button>
+                    <h3 class="form-title">Envoyer un message</h3>
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="contact-name">Votre nom *</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Jean Dupont" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Votre email *</label>
+                            <input type="email" id="contact-email" name="email" placeholder="jean@exemple.com" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Votre message *</label>
+                            <textarea id="contact-message" name="message" placeholder="Décrivez votre projet ou votre demande..." rows="5" required></textarea>
+                        </div>
+                        <p class="contact-help"><i class="fas fa-info-circle"></i> Ce formulaire ouvre votre application email avec un message prérempli.</p>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i> Envoyer le Message
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2026 Kossivi Jacques Junior AGBENONZAN. Tous droits réservés.</p>
-            <div class="footer-links">
-                <a href="#accueil">Accueil</a>
-                <a href="#apropos">A propos</a>
-                <a href="#competences">Compétences</a>
-                <a href="#projets">Projets</a>
-                <a href="#contact">Contact</a>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">JJKA<span class="logo-dot">.</span></span>
+                    <p>Étudiant en Cybersécurité &amp; Réseaux · Abidjan, Côte d'Ivoire 🇨🇮</p>
+                </div>
+                <nav class="footer-links" aria-label="Liens du pied de page">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#apropos">À propos</a>
+                    <a href="#competences">Compétences</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#parcours">Parcours</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </div>
-        </div>
-    </footer>
-
-    <button class="back-to-top" aria-label="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    <div class="toast" role="status" aria-live="polite"></div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kossivi Jacques Junior AGBENONZAN. Tous droits réservés.</p>
+                <p class="footer-credit">Conçu &amp; développé avec <i class="fas fa-hear

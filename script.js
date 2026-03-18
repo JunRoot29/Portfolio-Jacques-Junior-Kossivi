@@ -1,3 +1,49 @@
+/* ── THEME TOGGLE ── */
+(function () {
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Restore saved preference or default to light
+    const saved = localStorage.getItem('jjka-theme');
+    
+    // Si pas de préférence sauvegardée, on reste en light (thème principal)
+    if (saved === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+    } else {
+        // Par défaut en light, pas besoin d'attribut car c'est le thème principal
+        html.removeAttribute('data-theme');
+        localStorage.setItem('jjka-theme', 'light');
+    }
+
+    function updateToggleLabel(theme) {
+        if (!themeToggle) return;
+        themeToggle.setAttribute(
+            'aria-label',
+            theme === 'light' ? 'Activer le mode sombre' : 'Activer le mode clair'
+        );
+    }
+
+    const currentTheme = html.hasAttribute('data-theme') ? 'dark' : 'light';
+    updateToggleLabel(currentTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = html.hasAttribute('data-theme') ? 'dark' : 'light';
+            const next = current === 'light' ? 'dark' : 'light';
+
+            if (next === 'dark') {
+                html.setAttribute('data-theme', 'dark');
+            } else {
+                html.removeAttribute('data-theme');
+            }
+
+            localStorage.setItem('jjka-theme', next);
+            updateToggleLabel(next);
+        });
+    }
+})();
+
+// Éléments DOM
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navAnchors = document.querySelectorAll('.nav-link');
@@ -9,11 +55,10 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
 let toastTimer;
 
+// Fonction toast
 const showToast = (message) => {
-    if (!toast) {
-        return;
-    }
-
+    if (!toast) return;
+    
     toast.textContent = message;
     toast.classList.add('is-visible');
     clearTimeout(toastTimer);
@@ -22,6 +67,7 @@ const showToast = (message) => {
     }, 2600);
 };
 
+// Menu mobile
 if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
@@ -44,6 +90,7 @@ if (menuToggle && navLinks) {
     });
 }
 
+// Animation des barres de compétences
 const animateSkills = () => {
     document.querySelectorAll('.skill-level').forEach((skill) => {
         const level = skill.getAttribute('data-level');
@@ -53,6 +100,7 @@ const animateSkills = () => {
     });
 };
 
+// Observer pour les compétences
 const skillsSection = document.querySelector('.skills');
 if (skillsSection) {
     const skillObserver = new IntersectionObserver((entries, observer) => {
@@ -67,13 +115,12 @@ if (skillsSection) {
     skillObserver.observe(skillsSection);
 }
 
+// Compteurs de statistiques
 const statNumbers = document.querySelectorAll('.stat-number[data-count]');
 
 const animateCounter = (element) => {
     const target = parseInt(element.getAttribute('data-count'), 10);
-    if (Number.isNaN(target)) {
-        return;
-    }
+    if (Number.isNaN(target)) return;
 
     const duration = 1600;
     const step = target / (duration / 16);
@@ -90,6 +137,7 @@ const animateCounter = (element) => {
     }, 16);
 };
 
+// Observer pour les statistiques
 const statsSection = document.querySelector('.stats');
 if (statsSection) {
     const observerStats = new IntersectionObserver((entries, observer) => {
@@ -104,6 +152,7 @@ if (statsSection) {
     observerStats.observe(statsSection);
 }
 
+// Filtrage des projets
 const filterButtons = document.querySelectorAll('.filter-btn');
 const allProjects = document.querySelectorAll('.project-card');
 
@@ -133,10 +182,11 @@ filterButtons.forEach((button) => {
             }
         });
 
-        showToast(`${visibleCount} projet(s) affiche(s)`);
+        showToast(`${visibleCount} projet(s) affiché(s)`);
     });
 });
 
+// Formulaire de contact
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (event) => {
@@ -158,10 +208,11 @@ if (contactForm) {
 
         window.location.href = mailtoLink;
         contactForm.reset();
-        showToast('Votre application email va s ouvrir.');
+        showToast('Votre application email va s\'ouvrir.');
     });
 }
 
+// Révélation au scroll
 const revealGroups = [
     '.hero-text > *',
     '.hero-image',
@@ -202,47 +253,46 @@ if (prefersReducedMotion) {
     revealElements.forEach((element) => revealObserver.observe(element));
 }
 
+// Animation des éléments flottants
 const floatingElements = document.querySelectorAll('.floating-element');
 floatingElements.forEach((element, index) => {
     element.style.animationDelay = `${index * 2}s`;
 });
 
+// Barre de progression du scroll
 const updateScrollProgress = () => {
-    if (!scrollProgress) {
-        return;
-    }
+    if (!scrollProgress) return;
 
     const max = document.documentElement.scrollHeight - window.innerHeight;
     const progress = max > 0 ? (window.scrollY / max) * 100 : 0;
     scrollProgress.style.width = `${Math.min(100, Math.max(0, progress))}%`;
 };
 
+// État de la navbar au scroll
 const toggleHeaderState = () => {
-    if (!navbar) {
-        return;
-    }
-
+    if (!navbar) return;
     navbar.classList.toggle('is-scrolled', window.scrollY > 80);
 };
 
+// Visibilité du bouton retour en haut
 const toggleBackToTop = () => {
-    if (!backToTop) {
-        return;
-    }
-
+    if (!backToTop) return;
     backToTop.classList.toggle('is-visible', window.scrollY > 600);
 };
 
+// Initialisation
 updateScrollProgress();
 toggleHeaderState();
 toggleBackToTop();
 
+// Écouteurs d'événements scroll
 window.addEventListener('scroll', () => {
     toggleHeaderState();
     updateScrollProgress();
     toggleBackToTop();
 });
 
+// Retour en haut
 if (backToTop) {
     backToTop.addEventListener('click', () => {
         window.scrollTo({
@@ -252,6 +302,7 @@ if (backToTop) {
     });
 }
 
+// Navigation active au scroll
 const sections = Array.from(navAnchors)
     .map((anchor) => document.querySelector(anchor.getAttribute('href')))
     .filter(Boolean);
@@ -259,9 +310,7 @@ const sections = Array.from(navAnchors)
 if (sections.length && navAnchors.length) {
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            if (!entry.isIntersecting) {
-                return;
-            }
+            if (!entry.isIntersecting) return;
 
             const activeId = `#${entry.target.id}`;
             navAnchors.forEach((link) => {
@@ -274,6 +323,7 @@ if (sections.length && navAnchors.length) {
     sections.forEach((section) => sectionObserver.observe(section));
 }
 
+// Effet parallax sur la section hero (si animations non réduites)
 if (!prefersReducedMotion) {
     const hero = document.querySelector('.hero');
     const parallaxTargets = document.querySelectorAll('.orb, .floating-element');
