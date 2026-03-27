@@ -1,46 +1,43 @@
 /* ── THEME TOGGLE ── */
 (function () {
-    const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
-
-    // Restore saved preference or default to light
     const saved = localStorage.getItem('jjka-theme');
-    
-    // Si pas de préférence sauvegardée, on reste en light (thème principal)
+
+    // Appliquer immédiatement pour éviter le flash
     if (saved === 'dark') {
         html.setAttribute('data-theme', 'dark');
     } else {
-        // Par défaut en light, pas besoin d'attribut car c'est le thème principal
         html.removeAttribute('data-theme');
         localStorage.setItem('jjka-theme', 'light');
     }
 
-    function updateToggleLabel(theme) {
+    // Brancher le bouton après chargement du DOM
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('themeToggle');
         if (!themeToggle) return;
-        themeToggle.setAttribute(
-            'aria-label',
-            theme === 'light' ? 'Activer le mode sombre' : 'Activer le mode clair'
-        );
-    }
 
-    const currentTheme = html.hasAttribute('data-theme') ? 'dark' : 'light';
-    updateToggleLabel(currentTheme);
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const current = html.hasAttribute('data-theme') ? 'dark' : 'light';
-            const next = current === 'light' ? 'dark' : 'light';
-
-            if (next === 'dark') {
+        function applyTheme(theme) {
+            if (theme === 'dark') {
                 html.setAttribute('data-theme', 'dark');
             } else {
                 html.removeAttribute('data-theme');
             }
+            localStorage.setItem('jjka-theme', theme);
+            themeToggle.setAttribute(
+                'aria-label',
+                theme === 'dark' ? 'Activer le mode clair' : 'Activer le mode sombre'
+            );
+        }
 
-            localStorage.setItem('jjka-theme', next);
-            updateToggleLabel(next);
+        // Initialiser le label
+        const currentTheme = html.hasAttribute('data-theme') ? 'dark' : 'light';
+        applyTheme(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.hasAttribute('data-theme') ? 'dark' : 'light';
+            applyTheme(current === 'light' ? 'dark' : 'light');
         });
-    }
+    });
 })();
 
 // Éléments DOM
@@ -225,7 +222,8 @@ const revealGroups = [
     '.category',
     '.timeline-item',
     '.contact-item',
-    '.contact-form'
+    '.contact-form',
+    '.cert-card'
 ];
 
 const revealElements = document.querySelectorAll(revealGroups.join(', '));
