@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const roles = [
         'Étudiant Cybersécurité & Réseaux',
-        'CTF Player · picoCTF & TryHackMe',
+        'CTF Player · CyLab Academy',
         'Cyberanalyste Junior (Cisco)',
         'Python Lover',
     ];
