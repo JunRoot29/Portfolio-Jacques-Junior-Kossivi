@@ -579,6 +579,19 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; line-height: 1.15; }
 .timeline-date { padding: 18px 24px 14px 0; text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
 /* Quand la date est en 3e colonne (items impairs), on ajuste l'alignement */
 .timeline-item > .timeline-date:last-child { padding: 18px 0 14px 24px; text-align: left; align-items: flex-start; }
+.timeline-item:nth-child(n + 4) .timeline-content {
+    grid-column: 3;
+}
+.timeline-item:nth-child(n + 4) .timeline-date {
+    grid-column: 3;
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 24px;
+    padding-right: 0;
+}
+.timeline-item:nth-child(n + 4) .timeline-dot {
+    grid-column: 2;
+}
 
 .tl-year { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--primary); font-size: 0.93rem; }
 .tl-status { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: rgba(0,158,136,0.08); color: var(--accent); border: 1px solid rgba(0,158,136,0.2); padding: 2px 8px; border-radius: 999px; }
